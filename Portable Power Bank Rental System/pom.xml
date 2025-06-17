@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="gbk"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--åŸºæœ¬ä¿¡æ¯-->
+    <!--»ù±¾ÐÅÏ¢-->
     <groupId>Learning_Project</groupId>
     <artifactId>powerbankrental</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Portable Power Bank Rental System</name>
 
-    <!--é¡¹ç›®å±žæ€§-->
+    <!--ÏîÄ¿ÊôÐÔ-->
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
         <java.version>24</java.version>
         <logback.version>1.4.6</logback.version>
         <mysql.connector.version>8.0.33</mysql.connector.version>
     </properties>
 
-    <!--ä¾èµ–ç®¡ç†-->
+    <!--ÒÀÀµ¹ÜÀí-->
     <dependencies>
-        <!-- JDBC é©±åŠ¨ (MySQL) -->
+        <!-- JDBC Çý¶¯ (MySQL) -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
         </dependency>
 
-        <!-- æ—¥å¿—æ”¯æŒ SLF4J API -->
+        <!-- ÈÕÖ¾Ö§³Ö SLF4J API -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>2.0.17</version>
         </dependency>
 
-        <!-- æ—¥å¿—æ¡†æž¶ Logback -->
+        <!-- ÈÕÖ¾¿ò¼Ü Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.4.6</version>
         </dependency>
 
-        <!-- JUnit æµ‹è¯•æ”¯æŒ -->
+        <!-- JUnit ²âÊÔÖ§³Ö -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -57,7 +57,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- bcprov-jdk15on å“ˆå¸ŒåŠ å¯† -->
+        <!-- bcprov-jdk15on ¹þÏ£¼ÓÃÜ -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpg-jdk15on</artifactId>

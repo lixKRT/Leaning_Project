@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="">
+    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="测试">
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -44,6 +54,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2yYMVu3wIJnUAVI7epwnalgUM3y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
@@ -67,7 +80,7 @@
     "project.structure.last.edited": "全局库",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.24022989",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "settings.editor.selected.configurable": "database.other",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,8 +110,18 @@
       <workItem from="1750008711532" duration="762000" />
       <workItem from="1750009604314" duration="308000" />
       <workItem from="1750088971948" duration="1065000" />
-      <workItem from="1750160742998" duration="310000" />
+      <workItem from="1750160742998" duration="1595000" />
+      <workItem from="1750163114945" duration="9483000" />
     </task>
+    <task id="LOCAL-00001" summary="测试">
+      <option name="closed" value="true" />
+      <created>1750161401864</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750161401864</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +133,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -132,6 +160,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="使用Maven，配置pom.xml" />
+    <MESSAGE value="测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
