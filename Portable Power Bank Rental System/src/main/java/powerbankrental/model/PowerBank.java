@@ -1,10 +1,10 @@
 package powerbankrental.model;
 
 import  powerbankrental.model.enums.PowerBankStatus;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+//充电宝实体类
 public class PowerBank {
     private String powerBankId;
     private String model;
@@ -33,8 +33,8 @@ public class PowerBank {
     }
     //用于数据库加载数据
     public PowerBank(String powerBankId, String model, int initialCapacityMah,
-                int currentCapacityPercentage, PowerBankStatus status,  LocalDateTime addedDate,
-                String locationDescription,  int totalChargingDurationMinutes, int totalRentalCount) {
+                     int currentCapacityPercentage, PowerBankStatus status, LocalDateTime addedDate,
+                     String locationDescription, int totalChargingDurationMinutes, int totalRentalCount) {
         this.powerBankId = powerBankId;
         this.model = model;
         this.initialCapacityMah = initialCapacityMah;
@@ -71,18 +71,18 @@ public class PowerBank {
         return this.currentCapacityPercentage;
     }
     public void setCurrentCapacityPercentage(int currentCapacityPercentage) {
-        if(currentCapacityPercentage < 0 || currentCapacityPercentage > 100) {
+/*        if(currentCapacityPercentage < 0 || currentCapacityPercentage > 100) {
             throw new IllegalArgumentException("Current capacity percentage must be between 0 and 100");
         }
-        this.currentCapacityPercentage = currentCapacityPercentage;
+        this.currentCapacityPercentage = currentCapacityPercentage;*/
 
-/*        if(currentCapacityPercentage < 0 ) {
+        if(currentCapacityPercentage < 0 ) {
             this.currentCapacityPercentage = 0;
         }else if(currentCapacityPercentage > 100) {
             this.currentCapacityPercentage = 100;
         }else  {
             this.currentCapacityPercentage = currentCapacityPercentage;
-        }*/
+        }
     }
 
     public  PowerBankStatus getStatus() {
@@ -126,28 +126,48 @@ public class PowerBank {
     }
     //增加累计充电时长
     public void increaseTotalChargingDurationMinutes(int minutes) {
-        if(minutes < 0) {
+/*        if(minutes < 0) {
             throw new IllegalArgumentException("Minimum amount of minutes must be greater than zero");
+        }*/
+
+        if(minutes > 0) {
+            this.totalChargingDurationMinutes += minutes;
         }
-        this.totalChargingDurationMinutes += minutes;
     }
-    //根据电量自动更新状态
+    //更新电量并根据电量自动更新状态
     public void updateChargeAndStatus(int newChargePercentage) {
-//        TODO
-//        修改set抛出异常的方法（不抛出异常）||  使用集合对电量百分比做限制  ||  完善下列捕获异常方法
-//        选哪个
-        try{
+/*
+        修改set抛出异常的方法（不抛出异常）||  使用集合对电量百分比做限制  ||  完善下列捕获异常方法
+        选哪个？-6.17
+        决定了，改set，让前面处理-6.18*/
+/*        try{
             setCurrentCapacityPercentage(newChargePercentage);
         }catch(Exception e) {
             e.getMessage();
-        }
+        }*/
 
-        if(newChargePercentage > 50) {
-            this.status = PowerBankStatus.AVAILABLE;
-        }else if(newChargePercentage < 50 && newChargePercentage > 20) {
-            this.status = PowerBankStatus.LOW_BATTERY;
-        }else {
-            this.status = PowerBankStatus.UNAVAILABLE;
+        if (status != PowerBankStatus.UNAVAILABLE && status != PowerBankStatus.MAINTENANCE
+                && status != PowerBankStatus.CHARGING && status != PowerBankStatus.DISCARDED) {
+            if (newChargePercentage > 50) {
+                this.status = PowerBankStatus.AVAILABLE;
+            } else if (newChargePercentage < 50 && newChargePercentage > 20) {
+                this.status = PowerBankStatus.LOW_BATTERY;
+            } else {
+                this.status = PowerBankStatus.UNAVAILABLE;
+            }
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {return true;}
+        if (obj == null || getClass() != obj.getClass()) {return false;}
+        PowerBank powerBank = (PowerBank) obj;
+        return Objects.equals(powerBankId, powerBank.powerBankId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(powerBankId);
     }
 }

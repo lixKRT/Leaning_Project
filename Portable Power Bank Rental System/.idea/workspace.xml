@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
     "project.structure.last.edited": "全局库",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.24022989",
-    "settings.editor.selected.configurable": "database.other",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -112,6 +106,7 @@
       <workItem from="1750088971948" duration="1065000" />
       <workItem from="1750160742998" duration="1595000" />
       <workItem from="1750163114945" duration="9483000" />
+      <workItem from="1750217284324" duration="4990000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />
@@ -165,6 +160,17 @@
     <MESSAGE value="使用Maven，配置pom.xml" />
     <MESSAGE value="测试" />
     <option name="LAST_COMMIT_MESSAGE" value="测试" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -6,7 +6,8 @@ public enum PowerBankStatus {
     AVAILABLE,
     RENTED,
     LOW_BATTERY,//低电量
-    MAINTENANCE,
-    CHARGING,
-    UNAVAILABLE,
+    MAINTENANCE,//维护中
+    CHARGING,//充电中
+    UNAVAILABLE,//不可用
+    DISCARDED;//报废，丢弃
 }
