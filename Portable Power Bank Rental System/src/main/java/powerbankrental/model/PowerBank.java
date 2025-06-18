@@ -71,18 +71,18 @@ public class PowerBank {
         return this.currentCapacityPercentage;
     }
     public void setCurrentCapacityPercentage(int currentCapacityPercentage) {
-/*        if(currentCapacityPercentage < 0 || currentCapacityPercentage > 100) {
+        if(currentCapacityPercentage < 0 || currentCapacityPercentage > 100) {
             throw new IllegalArgumentException("Current capacity percentage must be between 0 and 100");
         }
-        this.currentCapacityPercentage = currentCapacityPercentage;*/
+        this.currentCapacityPercentage = currentCapacityPercentage;
 
-        if(currentCapacityPercentage < 0 ) {
+/*        if(currentCapacityPercentage < 0 ) {
             this.currentCapacityPercentage = 0;
         }else if(currentCapacityPercentage > 100) {
             this.currentCapacityPercentage = 100;
         }else  {
             this.currentCapacityPercentage = currentCapacityPercentage;
-        }
+        }*/
     }
 
     public  PowerBankStatus getStatus() {
@@ -126,9 +126,9 @@ public class PowerBank {
     }
     //增加累计充电时长
     public void increaseTotalChargingDurationMinutes(int minutes) {
-/*        if(minutes < 0) {
+        if(minutes < 0) {
             throw new IllegalArgumentException("Minimum amount of minutes must be greater than zero");
-        }*/
+        }
 
         if(minutes > 0) {
             this.totalChargingDurationMinutes += minutes;
@@ -139,7 +139,8 @@ public class PowerBank {
 /*
         修改set抛出异常的方法（不抛出异常）||  使用集合对电量百分比做限制  ||  完善下列捕获异常方法
         选哪个？-6.17
-        决定了，改set，让前面处理-6.18*/
+        决定了，改set，让前面处理-6.18
+        还是决定用throw了-6.18*/
 /*        try{
             setCurrentCapacityPercentage(newChargePercentage);
         }catch(Exception e) {

@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="测试">
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/PasswordUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/enums/PowerBankStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,28 +59,28 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.powerbankrental [clean].executor": "Run",
-    "Maven.powerbankrental [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "powerbankrental-lixkrt",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "全局库",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.24022989",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.powerbankrental [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.powerbankrental [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;powerbankrental-lixkrt&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;全局库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24022989&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
@@ -107,6 +110,8 @@
       <workItem from="1750160742998" duration="1595000" />
       <workItem from="1750163114945" duration="9483000" />
       <workItem from="1750217284324" duration="4990000" />
+      <workItem from="1750239925595" duration="10258000" />
+      <workItem from="1750259538911" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />

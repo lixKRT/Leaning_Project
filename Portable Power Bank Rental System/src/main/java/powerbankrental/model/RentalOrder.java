@@ -109,6 +109,64 @@ public class RentalOrder {
         this.orderStatus = orderStatus;
     }
 
+    //取消订单
+    public void cancelOrder() {
+        if (this.orderStatus != OrderStatus.ACTIVE){
+            throw new IllegalArgumentException("Only active orders can be cancelled");
+        }
+
+        //-6.18
+        //应该再加一个判定条件，只有前5分钟才可以取消订单
+        if(this.getRentalDurationMin() >= 5){
+            throw new IllegalArgumentException("Only  rental time less than 2 mins can be cancelled");
+        }
+
+        this.orderStatus = OrderStatus.CANCELLED;
+        this.rentalEndTime = LocalDateTime.now();
+        this.billedHours = 0;
+        this.fee = BigDecimal.ZERO;
+    }
+
+    //计算租凭时长（分钟）
+    public Long getRentalDurationMin(){
+        if (rentalStartTime == null || rentalEndTime == null){
+            throw new IllegalArgumentException("Rental start and end time connot be null");
+        }
+
+        return Duration.between(rentalStartTime, rentalEndTime).toMinutes();
+    }
+
+    //计算租凭时长（小时）
+    public static int calculateBilledHours(Long min){
+        if (min <= 0){
+            return 1;
+        }
+
+        return (int) Math.ceil(min/60);
+    }
+
+    //计算电量消耗量
+    public int calculateChargeLoss(){
+        if (rentalStartTime == null || rentalEndTime == null){
+            throw new IllegalArgumentException("Rental start and end time connot be null");
+        }
+
+        long min = getRentalDurationMin();
+        return (int)Math.min(min, 100);
+    }
+
+    //计算订单归还时电量百分比
+    public int getReturnChargePercentage(){
+        int chargeLoss = calculateChargeLoss();
+        int returnCharge = this.rentalStartChargePercentage -  chargeLoss;
+        return Math.max(0, returnCharge);
+    }
+
+    //计算费用
+    public BigDecimal calculateFee(Integer billedHours){
+        return  new BigDecimal(billedHours).multiply(HOURLY_RATE);
+    }
+
     //完成订单，根据租凭时间计算费用
     public BigDecimal completeOrder (LocalDateTime rentalEndTime){
         //在结算时，获取rentalEndTime
@@ -118,16 +176,24 @@ public class RentalOrder {
         }
 
         this.rentalEndTime = rentalEndTime;
+        long rentalDurationMin = getRentalDurationMin();
+        this.billedHours = calculateBilledHours(rentalDurationMin);
+        this.fee = calculateFee(billedHours);
+        this.orderStatus = OrderStatus.COMPLETED;
 
-        return BigDecimal.ZERO;
+        return this.fee;
     }
 
-    public Long getRentalDurationMin(){
-        if (rentalStartTime == null || rentalEndTime == null){
-            throw new IllegalArgumentException("Rental start and end time connot be null");
-//            return 0;
-        }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null && getClass() != obj.getClass()) return false;
+        RentalOrder other = (RentalOrder) obj;
+        return Objects.equals(orderId, other.orderId);
+    }
 
-        return Duration.between(rentalStartTime, rentalEndTime).toMinutes();
+    @Override
+    public int hashCode() {
+        return Objects.hash(orderId);
     }
 }
