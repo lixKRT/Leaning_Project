@@ -3,7 +3,6 @@ package powerbankrental.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -13,7 +12,7 @@ public class ConfigLoader {
     private static final Logger logger = LoggerFactory.getLogger(ConfigLoader.class);
 
     //默认配置文件地址
-    public static final String DEFAULT_CONFIG_FILE = "config.properties";
+    public static final String DEFAULT_CONFIG_FILE = "db_config.properties";
     //单例实例
     private static ConfigLoader instance;
     //存储配置项的Properties对象

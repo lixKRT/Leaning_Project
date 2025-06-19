@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/PasswordUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="finish model and util,start dao">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/UserDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/PowerBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/RentalOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db_config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -67,6 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;powerbankrental-lixkrt&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -77,8 +82,13 @@
     &quot;project.structure.last.edited&quot;: &quot;全局库&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.24022989&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RunAnythingCache">
@@ -111,7 +121,11 @@
       <workItem from="1750163114945" duration="9483000" />
       <workItem from="1750217284324" duration="4990000" />
       <workItem from="1750239925595" duration="10258000" />
-      <workItem from="1750259538911" duration="1161000" />
+      <workItem from="1750259538911" duration="2098000" />
+      <workItem from="1750300134390" duration="344000" />
+      <workItem from="1750300741710" duration="4834000" />
+      <workItem from="1750317704251" duration="5042000" />
+      <workItem from="1750339461677" duration="8517000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />
@@ -121,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750161401864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finish model and util,start dao">
+      <option name="closed" value="true" />
+      <created>1750260817830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750260817830</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,14 +186,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="使用Maven，配置pom.xml" />
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="finish model and util,start dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish model and util,start dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java</url>
-          <line>79</line>
+          <line>92</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

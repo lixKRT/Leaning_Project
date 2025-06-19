@@ -25,14 +25,14 @@ public class DatabaseUtil {
             //从配置文件加载数据库配置
             Properties properties = new Properties();
             InputStream inputStream = DatabaseUtil.class.getClassLoader()
-                    .getResourceAsStream("config.properties");
+                    .getResourceAsStream("db_config.properties");
 
             if (inputStream != null) {
                 try {
                     properties.load(inputStream);
                 } catch (IOException e) {
-                    logger.error("Error loading config.properties", e);
-                    throw new ExceptionInInitializerError("Error loading config.properties");
+                    logger.error("Error loading db_config.properties", e);
+                    throw new ExceptionInInitializerError("Error loading db_config.properties");
                 }
 
                 url = properties.getProperty("url");
@@ -94,5 +94,11 @@ public class DatabaseUtil {
     }
     public static void closeConnection(Connection connection, PreparedStatement preparedStatement){
         closeConnection(connection, preparedStatement, null);
+    }
+    public static void closeConnection(ResultSet resultSet){
+        closeConnection(null, null, resultSet);
+    }
+    public static void closeConnection(PreparedStatement preparedStatement){
+        closeConnection(null, preparedStatement, null);
     }
 }

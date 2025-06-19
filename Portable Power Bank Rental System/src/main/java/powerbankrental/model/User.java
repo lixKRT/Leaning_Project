@@ -9,11 +9,17 @@ public class User {
     private Long userId;
     private String userName;
     private String passwordHash;
+    private String passwordSalt;
     private Role role;
     private boolean isActive;
     private LocalDateTime createdAt;
     private LocalDateTime lastLoginTime;
 
+    public User() {
+        this.isActive = true;
+        this.createdAt = LocalDateTime.now();
+        this.lastLoginTime = LocalDateTime.now();
+    }
     public User(String userName, String passwordHash, Role role) {
         this.userName = userName;
         this.passwordHash = passwordHash;
@@ -53,6 +59,13 @@ public class User {
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
     }
+
+    // TODO
+    public String getPasswordSalt() {
+        return this.passwordSalt;
+    }
+    public void setPasswordSalt(String passwordSalt) {this.passwordSalt = passwordSalt;}
+
 
     public Role getRole() {
         return this.role;
