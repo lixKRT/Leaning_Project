@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="continue dao.finish UserDAOImpl.java and all interface">
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" afterDir="false" />
+    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="continue dao.finish PowerBankDAOImpl.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,8 @@
       <workItem from="1750339461677" duration="8517000" />
       <workItem from="1750348106352" duration="306000" />
       <workItem from="1750383725537" duration="2275000" />
-      <workItem from="1750387893492" duration="3012000" />
+      <workItem from="1750387893492" duration="4038000" />
+      <workItem from="1750416551304" duration="9339000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />
@@ -148,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750348387740</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="continue dao.finish PowerBankDAOImpl.java">
+      <option name="closed" value="true" />
+      <created>1750391936576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750391936576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +203,8 @@
     <MESSAGE value="测试" />
     <MESSAGE value="finish model and util,start dao" />
     <MESSAGE value="continue dao.finish UserDAOImpl.java and all interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue dao.finish UserDAOImpl.java and all interface" />
+    <MESSAGE value="continue dao.finish PowerBankDAOImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="continue dao.finish PowerBankDAOImpl.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

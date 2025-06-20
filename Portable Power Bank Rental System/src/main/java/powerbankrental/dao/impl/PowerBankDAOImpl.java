@@ -187,8 +187,9 @@ public class PowerBankDAOImpl implements PowerBankDAO {
         try{
             connection = DatabaseUtil.getConnection();
 
-            String sql = "SELECT * FROM power_banks ORDER BY powerbank_id WHERE status = AVAILABLE";
-            //ORDER BY powerbank_id - 根据充电宝ID字段对结果进行排序
+            String sql = "SELECT * FROM power_banks WHERE status = ? ORDER BY powerbank_id";            //ORDER BY powerbank_id - 根据充电宝ID字段对结果进行排序
+            statement = connection.prepareStatement(sql);
+            statement.setString(1, PowerBankStatus.AVAILABLE.name());
 
             resultSet = statement.executeQuery();
 

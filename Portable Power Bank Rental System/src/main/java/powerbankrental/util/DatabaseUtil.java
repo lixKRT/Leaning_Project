@@ -74,8 +74,9 @@ public class DatabaseUtil {
         }
 
         try{
-            if(preparedStatement != null){}
-            preparedStatement.close();
+            if(preparedStatement != null){
+                preparedStatement.close();
+            }
         }catch (SQLException e){
             logger.error("Error closing prepared statement!", e);
         }
@@ -100,5 +101,8 @@ public class DatabaseUtil {
     }
     public static void closeConnection(PreparedStatement preparedStatement){
         closeConnection(null, preparedStatement, null);
+    }
+    public static void closeConnection(PreparedStatement preparedStatement, ResultSet resultSet){
+        closeConnection(null, preparedStatement, resultSet);
     }
 }
