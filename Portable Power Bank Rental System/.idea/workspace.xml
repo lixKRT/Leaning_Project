@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="finish model and util,start dao">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/UserDAOImpl.java" afterDir="false" />
+    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="continue dao.finish UserDAOImpl.java and all interface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db_config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/PowerBankDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,6 +120,9 @@
       <workItem from="1750300741710" duration="4834000" />
       <workItem from="1750317704251" duration="5042000" />
       <workItem from="1750339461677" duration="8517000" />
+      <workItem from="1750348106352" duration="306000" />
+      <workItem from="1750383725537" duration="2275000" />
+      <workItem from="1750387893492" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />
@@ -143,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750260817830</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="continue dao.finish UserDAOImpl.java and all interface">
+      <option name="closed" value="true" />
+      <created>1750348387740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750348387740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +192,8 @@
     <MESSAGE value="使用Maven，配置pom.xml" />
     <MESSAGE value="测试" />
     <MESSAGE value="finish model and util,start dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish model and util,start dao" />
+    <MESSAGE value="continue dao.finish UserDAOImpl.java and all interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="continue dao.finish UserDAOImpl.java and all interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
