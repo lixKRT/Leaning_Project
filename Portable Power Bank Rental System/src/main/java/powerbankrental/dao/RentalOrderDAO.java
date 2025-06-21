@@ -13,7 +13,7 @@ public interface RentalOrderDAO {
     int addRentalOrder(RentalOrder rentalOrder);
     int addRentalOrderInTransaction(RentalOrder rentalOrder, Connection connection);
 
-    RentalOrder getRentalOrderById(String orderId);
+    RentalOrder getRentalOrderById(long orderId);
     List<RentalOrder> getAllRentalOrders();
     List<RentalOrder> getActiveRentalOrdersByUserId(Long userId);
     List<RentalOrder> getAllRentalOrdersByUserId(Long userId);
@@ -21,9 +21,10 @@ public interface RentalOrderDAO {
     List<RentalOrder> getRentalOrdersByStatus(OrderStatus orderStatus);
 
     boolean updateRentalOrder(RentalOrder rentalOrder);
-    boolean updateRentalOrderStatus(String orderId, OrderStatus orderStatus);
-    boolean updateRentalOrderReturn(String orderId, LocalDateTime endTime, int billedHours,
+    boolean updateRentalOrderStatus(long orderId, OrderStatus orderStatus);
+    boolean updateRentalOrderReturn(long orderId, LocalDateTime endTime, int billedHours,
                                     BigDecimal fee, OrderStatus status);
-    boolean updateOrderReturnInTransaction(String orderId, LocalDateTime emdTime
+    boolean updateOrderReturnInTransaction(long orderId, LocalDateTime emdTime
             , int billedHours, BigDecimal fee,OrderStatus status, Connection connection);
+    boolean deleteOrder(long orderId);
 }

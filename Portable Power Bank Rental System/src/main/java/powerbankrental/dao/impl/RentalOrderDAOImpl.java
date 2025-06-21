@@ -105,7 +105,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
     }
 
     @Override
-    public RentalOrder getRentalOrderById(String orderId) {
+    public RentalOrder getRentalOrderById(long orderId) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -115,7 +115,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
 
             String sql = "SELECT * FROM rental_orders WHERE order_id = ?";
             statement = connection.prepareStatement(sql);
-            statement.setString(1, orderId);
+            statement.setLong(1, orderId);
 
             resultSet = statement.executeQuery();
 
@@ -319,7 +319,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
             }
 
             statement.setString(8, rentalOrder.getOrderStatus().name());
-            statement.setString(9, rentalOrder.getOrderId());
+            statement.setLong(9, rentalOrder.getOrderId());
 
             //Ö´ÐÐ¸üÐÂ
             int affectedRows = statement.executeUpdate();
@@ -340,7 +340,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
     }
 
     @Override
-    public boolean updateRentalOrderStatus(String orderId, OrderStatus orderStatus) {
+    public boolean updateRentalOrderStatus(long orderId, OrderStatus orderStatus) {
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -349,7 +349,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
 
             String sql  = "UPDATE rental_orders SET order_status = ? WHERE order_id = ?";
             statement = connection.prepareStatement(sql);
-            statement.setString(1, orderId);
+            statement.setLong(1, orderId);
             statement.setString(2, orderStatus.name());
 
             int affectedRows = statement.executeUpdate();
@@ -370,7 +370,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
     }
 
     @Override
-    public boolean updateRentalOrderReturn(String orderId, LocalDateTime endTime, int billedHours, BigDecimal fee, OrderStatus status) {
+    public boolean updateRentalOrderReturn(long orderId, LocalDateTime endTime, int billedHours, BigDecimal fee, OrderStatus status) {
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -384,7 +384,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
             statement.setInt(2, billedHours);
             statement.setBigDecimal(3, fee);
             statement.setString(4, status.name());
-            statement.setString(5, orderId);
+            statement.setLong(5, orderId);
 
             int affectedRows = statement.executeUpdate();
 
@@ -404,7 +404,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
     }
 
     @Override
-    public boolean updateOrderReturnInTransaction(String orderId, LocalDateTime emdTime
+    public boolean updateOrderReturnInTransaction(long orderId, LocalDateTime emdTime
             , int billedHours, BigDecimal fee, OrderStatus status, Connection connection) {
         PreparedStatement statement = null;
 
@@ -418,7 +418,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
             statement.setInt(2, billedHours);
             statement.setBigDecimal(3, fee);
             statement.setString(4, status.name());
-            statement.setString(5, orderId);
+            statement.setLong(5, orderId);
 
             int affectedRows = statement.executeUpdate();
             if (affectedRows > 0) {
@@ -440,7 +440,7 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
     public RentalOrder extractRentalOrderFromResultSet (ResultSet resultSet) throws SQLException {
         RentalOrder order = new RentalOrder();
 
-        order.setOrderId(resultSet.getString("order_id"));
+        order.setOrderId(resultSet.getInt("order_id"));
         order.setUserId(resultSet.getLong("user_id"));
         order.setPowerBankId(resultSet.getString("powerbank_id"));
 
@@ -461,5 +461,21 @@ public class RentalOrderDAOImpl implements RentalOrderDAO {
         order.setOrderStatus(OrderStatus.valueOf(resultSet.getString("order_status")));
 
         return order;
+    }
+
+    @Override
+    public boolean deleteOrder(long orderId) {
+        String sql = "DELETE FROM rental_orders WHERE order_id = ?";
+        try (Connection connection = DatabaseUtil.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setLong(1, orderId);
+            int rowsAffected = statement.executeUpdate();
+
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            logger.error("Error deleting rental order with ID: " + orderId, e);
+            return false;
+        }
     }
 }

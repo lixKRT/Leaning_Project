@@ -9,8 +9,8 @@ import java.util.Objects;
 
 //租凭订单实体类
 public class RentalOrder {
-    private String orderId;
-    private Long userId;
+    private long orderId;
+    private long userId;
     private String powerBankId;
     private LocalDateTime rentalStartTime;
     private int rentalStartChargePercentage;
@@ -32,7 +32,7 @@ public class RentalOrder {
         this.rentalStartChargePercentage = rentalStartChargePercentage;
     }
     //完整构造函数，用于数据库加载数据
-    public  RentalOrder(String orderId, Long userId, String powerBankId, LocalDateTime rentalStartTime,
+    public  RentalOrder(int orderId, Long userId, String powerBankId, LocalDateTime rentalStartTime,
                         int rentalStartChargePercentage, LocalDateTime rentalEndTime,
                         Integer billedHours, BigDecimal fee, OrderStatus orderStatus) {
         this.orderId = orderId;
@@ -46,10 +46,10 @@ public class RentalOrder {
         this.orderStatus = orderStatus;
     }
 
-    public  String getOrderId() {
+    public long getOrderId() {
         return this.orderId;
     }
-    public void setOrderId(String orderId) {
+    public void setOrderId(long orderId) {
         this.orderId = orderId;
     }
 
@@ -142,7 +142,7 @@ public class RentalOrder {
             return 1;
         }
 
-        return (int) Math.ceil(min/60);
+        return (int) Math.ceil(min/60.0);
     }
 
     //计算电量消耗量
