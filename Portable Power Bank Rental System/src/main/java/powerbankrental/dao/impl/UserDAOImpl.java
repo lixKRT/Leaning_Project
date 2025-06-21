@@ -18,7 +18,7 @@ public class UserDAOImpl implements UserDAO {
 
     //添加新用户到数据库
     @Override
-    public int addUser(User user) {
+    public long addUser(User user) {
         //声明数据库连接，预处理语句和结果集对象
         Connection connection = null;
         PreparedStatement statement = null;
@@ -61,9 +61,9 @@ public class UserDAOImpl implements UserDAO {
             //获取自动生成的用户ID
             resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
-                int user_id = resultSet.getInt(1);//获取数据库自动生成的主键值。
+                long user_id = resultSet.getInt(1);//获取数据库自动生成的主键值。
                 // 参数1表示结果集的第一列，即自增的ID值，而不是指用户ID为1。
-                user.setUserId((long) user_id);//设置自增ID为userId
+                user.setUserId(Long.valueOf(user_id));//设置自增ID为userId
                 logger.info("addUser() successful with id " + user_id);
                 return user_id;
             }else {

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="continue dao.finish PowerBankDAOImpl.java">
+    <list default="true" id="73500ffa-dac5-4b18-bd48-8d67cc629a1a" name="更改" comment="start service.finish all dao">
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/service/PowerBankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/service/impl/PowerBankServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/RentalOrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/PowerBankDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/RentalOrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/util/DatabaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/powerbankrental/dao/impl/UserDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +47,9 @@
     &quot;accountId&quot;: &quot;72c6b99c-8892-4b88-b22e-1d049d62c924&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -124,7 +129,8 @@
       <workItem from="1750348106352" duration="306000" />
       <workItem from="1750383725537" duration="2275000" />
       <workItem from="1750387893492" duration="4038000" />
-      <workItem from="1750416551304" duration="9339000" />
+      <workItem from="1750416551304" duration="10136000" />
+      <workItem from="1750487720073" duration="13499000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <option name="closed" value="true" />
@@ -158,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750391936576</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="start service.finish all dao">
+      <option name="closed" value="true" />
+      <created>1750428158372</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750428158372</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +218,8 @@
     <MESSAGE value="finish model and util,start dao" />
     <MESSAGE value="continue dao.finish UserDAOImpl.java and all interface" />
     <MESSAGE value="continue dao.finish PowerBankDAOImpl.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue dao.finish PowerBankDAOImpl.java" />
+    <MESSAGE value="start service.finish all dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="start service.finish all dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
